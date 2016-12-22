@@ -1,0 +1,48 @@
+
+@keyframes moveFlake{
+	0%{
+		transform:rotate(0deg);
+	}
+	100%{
+		transform:rotate(180deg);
+	}
+}
+
+#flake{
+	transform-origin: 50% 50%;
+	animation: moveFlake 2s cubic-bezier(0.71,-0.1, 0.46, 1.49) alternate infinite;
+
+}
+
+#centerDroit, #centerGauche, #centerBlack, #basBlack {
+	fill:#ffffff;
+  stroke-dasharray: 1000;
+  /*stroke-dashoffset: 1000;*/
+  animation: dash 7s cubic-bezier(0.71,-0.1, 0.46, 1.49) alternate infinite;
+}
+
+@keyframes dash {
+	0%{
+		stroke-dashoffset: 3000;
+	}
+	100%{
+		stroke-dashoffset: 0;
+	}
+
+}
+
+@keyframes clrBlack {
+	0%{
+		fill:transparent;
+	}
+	100%{
+		fill:#6c6a6a;
+	}
+
+}
+.newClr{
+	fill:#6c6a6a;
+	animation: clrBlack 2s cubic-bezier(0.71,-0.1, 0.46, 1.49);
+}
+
+
